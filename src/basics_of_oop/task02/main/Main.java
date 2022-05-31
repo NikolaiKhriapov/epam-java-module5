@@ -2,11 +2,16 @@ package basics_of_oop.task02.main;
 
 import java.util.Scanner;
 
-import basics_of_oop.task02.database.ProductsDatabase;
 import basics_of_oop.task02.entity.Payment;
 
 /*
  * Задача 2. Создать класс Payment с внутренним классом, с помощью объектов которого можно сформировать покупку из нескольких товаров.
+ */
+
+/**
+ * 
+ * убрать totalAmount из payment
+ *
  */
 
 public class Main {
@@ -24,10 +29,8 @@ public class Main {
     }
     
     private static void printActions() {
-	ProductsDatabase productsDatabase = new ProductsDatabase();
-	
 	System.out.println("Control panel:");
-	System.out.println("1. Add new product to the list (" + productsDatabase.printListOfProducts() + ")");
+	System.out.println("1. Add new product to the list");
 	System.out.println("2. Remove product from the list");
 	System.out.println("3. Show list of products");
 	System.out.println("4. Show total amount");
