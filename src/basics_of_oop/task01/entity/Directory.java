@@ -1,41 +1,48 @@
-package basics_of_oop.task01;
+package basics_of_oop.task01.entity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * Задача 1. Создать объект класса Текстовый файл, используя классы Файл, Директория.
  * Методы: создать, переименовать, вывести на консоль содержимое, дополнить, удалить.
  */
 
-public abstract class File {
+public class Directory {
     private String name;
-    private String content;
-    private String extension;
+    private List<File> listOfFiles = new ArrayList<File>();
+    
+    public Directory() {
+	super();
+    }
+
+    public Directory(String name, List<File> listOfFiles) {
+	super();
+	this.name = name;
+	this.listOfFiles = listOfFiles;
+    }
 
     public String getName() {
-	return name;
+        return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
-    public String getContent() {
-	return content;
+    public List<File> getListOfFiles() {
+        return listOfFiles;
     }
 
-    public void setContent(String content) {
-	this.content = content;
-    }
-
-    public String getExtension() {
-	return extension;
+    public void setListOfFiles(List<File> listOfFiles) {
+        this.listOfFiles = listOfFiles;
     }
 
     @Override
     public int hashCode() {
 	final int prime = 31;
 	int result = 1;
-	result = prime * result + ((content == null) ? 0 : content.hashCode());
-	result = prime * result + ((extension == null) ? 0 : extension.hashCode());
+	result = prime * result + ((listOfFiles == null) ? 0 : listOfFiles.hashCode());
 	result = prime * result + ((name == null) ? 0 : name.hashCode());
 	return result;
     }
@@ -48,16 +55,11 @@ public abstract class File {
 	    return false;
 	if (getClass() != obj.getClass())
 	    return false;
-	File other = (File) obj;
-	if (content == null) {
-	    if (other.content != null)
+	Directory other = (Directory) obj;
+	if (listOfFiles == null) {
+	    if (other.listOfFiles != null)
 		return false;
-	} else if (!content.equals(other.content))
-	    return false;
-	if (extension == null) {
-	    if (other.extension != null)
-		return false;
-	} else if (!extension.equals(other.extension))
+	} else if (!listOfFiles.equals(other.listOfFiles))
 	    return false;
 	if (name == null) {
 	    if (other.name != null)
@@ -69,6 +71,6 @@ public abstract class File {
 
     @Override
     public String toString() {
-	return "File [name=" + name + ", content=" + content + ", extension=" + extension + "]";
+	return "Directory [name=" + name + ", listOfFiles=" + listOfFiles + "]";
     }
 }

@@ -1,4 +1,4 @@
-package basics_of_oop.task01;
+package basics_of_oop.task01.entity;
 
 /*
  * Задача 1. Создать объект класса Текстовый файл, используя классы Файл, Директория.

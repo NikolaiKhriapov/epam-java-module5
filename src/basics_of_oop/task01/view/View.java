@@ -1,4 +1,7 @@
-package basics_of_oop.task01;
+package basics_of_oop.task01.view;
+
+import basics_of_oop.task01.entity.Directory;
+import basics_of_oop.task01.entity.File;
 
 /*
  * Задача 1. Создать объект класса Текстовый файл, используя классы Файл, Директория.

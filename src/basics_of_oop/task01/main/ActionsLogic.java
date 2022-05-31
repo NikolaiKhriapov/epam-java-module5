@@ -1,6 +1,12 @@
-package basics_of_oop.task01;
+package basics_of_oop.task01.main;
 
 import java.util.Scanner;
+
+import basics_of_oop.task01.entity.Directory;
+import basics_of_oop.task01.entity.File;
+import basics_of_oop.task01.entity.TextFile;
+import basics_of_oop.task01.logic.FileLogic;
+import basics_of_oop.task01.view.View;
 
 /*
  * Задача 1. Создать объект класса Текстовый файл, используя классы Файл, Директория.
@@ -98,7 +104,7 @@ public class ActionsLogic {
 	System.exit(0);
     }
     
-    // Data input
+    // Other
     private static String inputText(String message) {
 	@SuppressWarnings("resource")
 	Scanner scanner = new Scanner(System.in);
